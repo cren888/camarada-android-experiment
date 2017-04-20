@@ -1,4 +1,4 @@
-# Camarada VR Client app 
+# Camarada VR Android Experiment
 
 ## Contains
 1. 3D VR Camcorder/Camera, Solo and Dual Mode
@@ -14,7 +14,7 @@
 
 ## Please note
 1. You will need set up your own API key and get a google-services.json file if you want to use Firebase (copy that to aimfireVR directory) 
-2. You will need your own implementation of a cloud storage solution to compile
+2. You will need your own implementation of a cloud storage solution (we will stub functions to compile)
 
 License
 =======
