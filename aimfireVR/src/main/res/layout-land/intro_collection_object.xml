@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intro_layout"
+    android:background="@drawable/background_instagram"
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".IntroductionActivity" >
+
+    <TextView
+        android:id="@+id/intro_title"
+        style="@style/IntroTitleText"
+        android:textColor="#ffffff"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" 
+        android:layout_weight="0" />
+
+    <ImageView
+        android:id="@+id/intro_pictures"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"/>
+
+    <LinearLayout 
+        android:id="@+id/intro_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    
+        <TextView
+            android:id="@+id/intro_subtitle"
+            style="@style/IntroTitleText"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"/>
+    
+        <TextView
+            android:id="@+id/intro_desc"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp"
+            style="@style/IntroDescText" />
+    </LinearLayout>
+
+</LinearLayout>

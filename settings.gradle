@@ -1,0 +1,3 @@
+include ':aimfireCVLib-release', ':aimfireLib-release'
+include ':surveyLib'
+include ':aimfireVR'

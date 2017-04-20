@@ -1,0 +1,60 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+#-printconfiguration config.txt
+
+# Add any project specific keep options here:
+-printmapping build/outputs/mapping/release/mapping.txt
+
+-keep class android.support.v4.app.** { *; }
+-keep interface android.support.v4.app.** { *; }
+-keep class com.aimfire.utilities.** { *; }
+
+# good_play_services specific
+
+-keep class * extends java.util.ListResourceBundle {
+    protected java.lang.Object[][] getContents();
+}
+
+# Keep SafeParcelable value, needed for reflection. This is required to support backwards
+# compatibility of some classes.
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+# Keep the names of classes/members we need for client functionality.
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+# Needed for Parcelable/SafeParcelable Creators to not get stripped
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Needed when building against the Marshmallow SDK
+-dontwarn org.apache.http.**
+
+# Needed when building against pre-Marshmallow SDK.
+-dontwarn android.security.NetworkSecurityPolicy
+
+# Needed when building against the API 23 (otherwise getting "can't find referenced method 'float ceil(float)' in library class android.util.FloatMath")
+-dontwarn com.google.vr.**
+
+# c.f. http://stackoverflow.com/questions/18646899/proguard-cant-find-referenced-class-com-google-android-gms-r
+-keep class com.google.android.gms.** {public *; }
+-dontwarn com.google.android.gms.**
+
+#-dontnote android.net.http.*
+#-dontnote org.apache.commons.codec.**
+#-dontnote org.apache.http.**

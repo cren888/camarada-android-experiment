@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Camarada_Open.iml" filepath="$PROJECT_DIR$/Camarada_Open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aimfireCVLib-release/aimfireCVLib-release.iml" filepath="$PROJECT_DIR$/aimfireCVLib-release/aimfireCVLib-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aimfireLib-release/aimfireLib-release.iml" filepath="$PROJECT_DIR$/aimfireLib-release/aimfireLib-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aimfireVR/aimfireVR.iml" filepath="$PROJECT_DIR$/aimfireVR/aimfireVR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surveyLib/surveyLib.iml" filepath="$PROJECT_DIR$/surveyLib/surveyLib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="orange">#FFFFA500</color>
+    <color name="red">#FFFF0000</color>
+    <color name="light_grey">#acacac</color>
+    <color name="medium_grey">#333333</color>
+    <color name="dark_grey">#212121</color>
+    <color name="blue">#33b4e5</color>
+    <color name="yellow">#ffbb33</color>
+    <color name="offwhite">#eeeeee</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="status_bar_color">#FF000000</color>
+    <color name="layout_border_color">#FF111111</color>
+    <color name="start_button_start_color">#DAD299</color>
+    <color name="start_button_end_color">#B0DAB9</color>
+    <color name="start_button_start_color_pressed">#FFEDDE5D</color>
+    <color name="start_button_end_color_pressed">#FFF09819</color>
+</resources>

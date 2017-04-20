@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    tools:context="com.aimfire.demo.CamcorderActivity" >
+
+    <!--  this is very strange, but if we don't set the padding for FrameLayout -->
+    <!--  below, then the ImageButtons will not show properly after rotation.   -->
+    <!--  they get clipped or even disappear completely as device orientation   -->
+    <!--  changes. so we will set the 1px padding, which is hardly noticeable.  -->
+    <!--  this may be a bug in Android layout logic. but we don't have time to  -->
+    <!--  fully investigate.                                                    -->
+    <com.aimfire.layout.AspectFrameLayout 
+        android:id="@+id/cameraPreview_frame"
+        android:padding="1px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/cameraPreview_surfaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </com.aimfire.layout.AspectFrameLayout>
+
+    <ImageButton
+        android:id="@+id/view3D_button"
+        android:enabled="false"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_local_florist_black_24dp"
+        android:contentDescription="@string/view3D"/>
+
+    <ProgressBar
+        android:id="@+id/view3D_progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerInParent="true"
+        android:padding="20dp"
+        android:visibility="gone"
+        style="@android:style/Widget.ProgressBar.Small"
+        android:indeterminate="true" />
+    
+    <ImageButton
+        android:id="@+id/exit_button"
+        android:enabled="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_gray"
+        android:src="@drawable/ic_exit_to_app_black_24dp"
+        android:contentDescription="@string/exitCamera"/>
+
+    <!-- hide this button until we are in sync with remote camera -->
+    <ImageButton
+        android:id="@+id/switch_photo_video_button"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_gray"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        android:contentDescription="@string/switch_photo_video"/>
+
+    <!-- hide this button until we fully test front camera -->
+    <ImageButton
+        android:id="@+id/switch_front_back_button"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_not_level"
+        android:src="@drawable/ic_camera_front_black_24dp"
+        android:contentDescription="@string/switch_front_back"/>
+
+    <Button
+        android:id="@+id/level_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_button_not_level"
+        android:textSize="15sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:contentDescription="@null"/>
+
+    <LinearLayout
+        android:id="@+id/time_counter"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginEnd="30dp"
+        android:visibility="invisible"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/red_dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/round_button_red"/>
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" 
+            android:text="00:00:00"
+            android:textColor="#ff0000"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/shutter_layout"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="15dp">
+
+        <ImageButton
+            android:id="@+id/toggle_recording_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="20dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/round_button_gray"
+            android:src="@drawable/ic_videocam_black_24dp"
+            android:contentDescription="@string/toggleRecordingOn"/>
+
+        <ImageView
+            android:id="@+id/circular_progress_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="@null"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/scan_circular_progress_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:contentDescription="@null"/>
+
+    <ImageButton
+        android:id="@+id/mode_button"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_gray"
+        android:contentDescription="@null"/>
+</RelativeLayout>

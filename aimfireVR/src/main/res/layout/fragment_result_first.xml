@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlotResultActivity" >
+
+    <LinearLayout
+        android:id="@+id/waveformLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/waveformLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/waveformLayout1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phaseLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/waveformLayout2"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/waveformLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/phaseLayout1"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phaseLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/waveformLayout3"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:id="@+id/buttonsLayout1" 
+        android:layout_gravity="bottom" 
+        android:layout_alignParentBottom="true">
+    
+        <Button
+            android:id="@+id/prev_btn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Prev" />
+        
+        <Button
+            android:id="@+id/next_btn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Next" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="1/2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/buttonsLayout1"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>

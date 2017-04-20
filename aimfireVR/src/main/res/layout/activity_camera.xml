@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/black"
+    tools:context="com.aimfire.demo.CameraActivity" >
+
+    <!--  this is very strange, but if we don't set the padding for FrameLayout -->
+    <!--  below, then the ImageButtons will not show properly after rotation.   -->
+    <!--  they get clipped or even disappear completely as device orientation   -->
+    <!--  changes. so we will set the 1px padding, which is hardly noticeable.  -->
+    <!--  this may be a bug in Android layout logic. but we don't have time to  -->
+    <!--  fully investigate.                                                    -->
+    <com.aimfire.layout.AspectFrameLayout 
+        android:id="@+id/cameraPreview_frame"
+        android:padding="1px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.aimfire.layout.AspectFrameLayout>
+
+    <ImageButton
+        android:id="@+id/view3D_button"
+        android:enabled="false"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_local_florist_black_24dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/view3D"/>
+
+    <ImageButton
+        android:id="@+id/exit_button"
+        android:enabled="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_gray"
+        android:src="@drawable/ic_exit_to_app_black_24dp"
+        android:contentDescription="@string/exitCamera"/>
+
+
+    <ImageButton
+        android:id="@+id/switch_photo_video_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_gray"
+        android:src="@drawable/ic_videocam_black_24dp"
+        android:contentDescription="@string/switch_photo_video"/>
+
+    <!-- hide this button until we fully test front camera -->
+    <ImageButton
+        android:id="@+id/switch_front_back_button"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_not_level"
+        android:src="@drawable/ic_camera_front_black_24dp"
+        android:contentDescription="@string/switch_front_back"/>
+
+    <Button
+        android:id="@+id/level_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_button_not_level"
+        android:textSize="15sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:contentDescription="@null"/>
+
+    <ImageButton
+        android:id="@+id/capture_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="15dp"
+        android:padding="20dp"
+        android:scaleType="fitCenter"
+        android:soundEffectsEnabled="false"
+        android:background="@drawable/round_button_gray"
+        android:src="@drawable/ic_photo_camera_black_24dp"
+        android:contentDescription="@string/capture"/>
+
+    <ImageButton
+        android:id="@+id/mode_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_button_orange"
+        android:src="@drawable/ic_3d"
+        android:contentDescription="@null"/>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="capture_resolution_names">
+        <item>HD 1080p</item>
+         <item>HD 720p</item>
+         <item>SD 480p</item>
+    </string-array>
+
+    <string-array name="capture_position_names">
+        <item>Auto</item>
+        <item>Left Camera</item>
+        <item>Right Camera</item>
+    </string-array>
+
+    <string-array name="capture_storage_names">
+        <!--
+         <item>Left device only</item>
+         <item>Right device only</item>
+        -->
+        <item>Both devices</item>
+    </string-array>
+
+    <string-array name="view_zoom_names">
+         <item>1.5x</item>
+         <item>1.0x</item>
+         <item>0.75x</item>
+    </string-array>
+
+    <string-array name="view_parallax_names">
+         <item>Neutral</item>
+         <item>Positive</item>
+         <item>Negative</item>
+    </string-array>
+
+    <string-array name="prefs_summary_list">
+        <item>Current video resolution is set to: %1$s</item>
+        <item>Current camera position is set to: %1$s</item>
+        <item>Current storage device is set to: %1$s</item>
+        <item>Current zoom level is set to: %1$s</item>
+        <item>Current parallax adjustment is set to: %1$s</item>
+    </string-array>
+
+
+</resources>

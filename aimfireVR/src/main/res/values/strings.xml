@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Camarada VR</string>
+    <string name="app_name_no_space">CamaradaVR</string>
+    <string name="app_hashtag"> #CamaradaVR</string>
+    <string name="app_domain">camarada.co</string>
+    <string name="app_mime">application/cvr</string>
+    <string name="app_youtube_tutorial">http://www.youtube.com/watch?v=LVUYvS5PmgA</string>
+    <string name="app_support_email">support@aimfireinc.com</string>
+    <string name="app_store_link">https://play.google.com/store/apps/details?id=com.aimfire.camarada</string>
+
+    <string name="download_progress">Download Progress:</string>
+
+    <string name="gallery_activity_name">Gallery</string>
+    <string name="movie_activity_name">Camarada Movies</string>
+    <string name="photo_activity_name">Camarada Photos</string>
+    <string name="clipboard_activity_name">Copy Link</string>
+    <string name="survey_activity_name">Customer Survey</string>
+
+    <string name="tab_my_media_name">My Media</string>
+    <string name="tab_shared_with_me_name">Shared With Me</string>
+
+    <string name="finish_toast">Thank you for your feedback!</string>
+
+    <string name="aimfire_service_name">as</string>
+    <string name="photo_processor_name">pp</string>
+    <string name="video_processor_name">vp</string>
+    <string name="download_completion_name">dc</string>
+    <string name="samples_downloader_name">sd</string>
+    <string name="file_uploader_name">u</string>
+    <string name="file_downloader_name">d</string>
+
+    <string name="samples_link_dir_name">links</string>
+    <string name="samples_link_file_name">samples</string>
+
+    <string name="version_text_file_name">version.txt</string>
+
+    <string name="share_chooser_text">Share with</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="cont">Continue</string>
+    <string name="warning">Warning</string>
+    <string name="information">Information</string>
+    <string name="instruction">Instruction</string>
+    <string name="notice">Notice</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="later">Later</string>
+    <string name="share">Share</string>
+    <string name="dontAskAgain">Don\'t Ask Again</string>
+    <string name="delete">Delete</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="got_it">Got It</string>
+    <string name="tutorial">Watch Tutorial</string>
+
+    <string name="settings_file">AIMFIRE_SHARED_PREFS</string>
+    <string name="drive_file_record">DRIVE_FILE_RECORD</string>
+    <string name="download_history">DRIVE_DOWNLOAD_HISTORY</string>
+
+    <string name="action_camera">Camera</string>
+    <string name="action_gallery">Gallery</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_sbs_parallel">Parallel SBS</string>
+    <string name="action_sbs_cross">Cross-eyed SBS</string>
+    <string name="action_cardboard">Cardboard</string>
+    <string name="action_anaglyph_redcyan">Red/Cyan</string>
+    <string name="action_anaglyph_cyanred">Cyan/Red</string>
+    <string name="action_3dtv">3D TV</string>
+    <string name="action_swap">Swap</string>
+    <string name="action_grayscale">Gray Scale</string>
+    <string name="action_help">Help</string>
+    <string name="action_tutorial">Tutorial</string>
+    <string name="action_feedback">Send Feedback</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_thumb_view">Grid View</string>
+    <string name="action_switch_account">Switch Account</string>
+    <string name="action_search">Search</string>
+    <string name="capital_online">Online</string>
+    <string name="capital_offline">Offline</string>
+    <string name="type_message">type your message here</string>
+    <string name="type_name">type new device name here</string>
+    <string name="set">Set</string>
+    <string name="send">Send</string>
+    <string name="init">Init</string>
+    <string name="resp">Resp</string>
+    <string name="p2p">P2P</string>
+    <string name="app3d">3D Only</string>
+    <string name="appAll">All Demos</string>
+    <string name="showLog">Show Log</string>
+    <string name="hideLog">Hide Log</string>
+    <string name="speakerIcon">speakerIcon</string>
+    <string name="micIcon">micIcon</string>
+    <string name="speakerPic">speakerPic</string>
+    <string name="micPic">micPic</string>
+    <string name="toggleRecordingOn">Record</string>
+    <string name="toggleRecordingOff">Stop</string>
+    <string name="debugMsg">Debug Message</string>
+
+    <string name="view3D">View 3D</string>
+    <string name="exitCamera">Exit</string>
+    <string name="capture">Capture</string>
+    <string name="switch_front_back">Switch front/back</string>
+    <string name="switch_photo_video">Switch photo/video</string>
+    <string name="noMedia">No 3D Media</string>
+    <string name="choose_file_format">Choose file format</string>
+
+    <string name="stereoCamera">3D Camera</string>
+    <string name="stereoCamcorder">3D Camcorder</string>
+
+    <string name="feedbackEmailSubject">Camarada VR feedback</string>
+
+    <string name="emailSubjectVideo">Check out my VR video</string>
+    <string name="emailBodyVideoPrefix">Enjoy my 3D video -\u0020</string>
+
+    <string name="emailSubjectVideo2d">Check out my video</string>
+    <string name="emailBodyVideoPrefix2d">Enjoy my video in VR -\u0020</string>
+
+    <string name="emailSubjectPhoto">Check out my 3D photo</string>
+    <string name="emailBodyPhotoPrefix">Enjoy my 3D photo -\u0020</string>
+
+    <string name="emailSubjectInviteFriend">Create TRUE 3D video with this app</string>
+    <string name="emailBodyInviteFriend">Cool 3D app, try it out! -\u0020</string>
+
+    <!--
+    <string name="emailBodyAppendix">\n\nFREE viewer - http://play.google.com/store/apps/details?id=com.aimfire.camarada</string> 
+    -->
+
+    <string name="emailSubjectGeneric">Check out my VR content!</string>
+    <string name="emailBodyGeneric">\n\nFREE viewer - http://play.google.com/store/apps/details?id=com.aimfire.camarada</string>
+    <string name="emailBodyGenericPrefix">Enjoy -\u0020</string>
+
+    <string name="twitterHashtagVideo">\n\n#MyFirst3dVideo </string>
+    <string name="twitterHashtagPhoto">\n\n#MyFirst3dPhoto </string>
+
+    <string name="noMediaHintTitle">No VR Media Found</string>
+    <string name="noMediaHintText">Press camera button to start pairing/capturing</string>
+    <string name="quickTourHintTitle">Quick Tour</string>
+    <string name="quickTourHintText">Tap anywhere to continue\.\.\.</string>
+    <string name="captureHintTitle">Shutter Button</string>
+    <string name="captureHintText">Press here to capture your first VR video!</string>
+    <string name="frontBackHintTitle">Camera Switch</string>
+    <string name="frontBackHintText">Toggles between front/back cameras</string>
+    <string name="photoVideoHintTitle">Mode Switch</string>
+    <string name="photoVideoHintText">Toggles between camera/camcorder modes</string>
+    <string name="levelHintTitle">Level Indicator</string>
+    <string name="levelHintText">Keep devices level when shooting, for better results</string>
+    <string name="exitHintTitle">Exit Button</string>
+    <string name="exitHintText">Click this button to exit camera on both devices</string>
+    <string name="modeButtonHintTitle">2D/3D Toggle Switch</string>
+    <string name="modeButtonHintText">Tap to switch between 2D/3D modes. \nFor 3D mode, open camera on both devices.</string>
+    <string name="cameraFabHintTitle">Camera Button</string>
+    <string name="cameraFabHintText">Tap here to capture VR video!</string>
+
+    <string name="leftCamHintTitle">Put this phone on TOP, and its camera on LEFT</string>
+    <string name="leftCamHintText">Tap anywhere to continue\.\.\.</string>
+    <string name="rightCamHintTitle">Put this device at BOTTOM, and its camera on RIGHT</string>
+    <string name="rightCamHintText">Tap anywhere to continue\.\.\.</string>
+
+    <string name="stackingInstruction">Stack the phones (as shown) to begin capture. \n\nMake sure you hold them stable duing capture.</string>
+
+    <!-- Toast messages -->
+    <string name="error_device_not_supported">Error initializing AimfireService: device not supported</string>
+    <string name="error_accessing_storage">Error accessing storage</string>
+    <string name="error_connecting">Error connecting remote device. Please retry</string>
+    <string name="error_headset">Headset detected. Please disconnect headset, then try again</string>
+    <string name="error_wifi_off">Error WiFi off. Please turn on WiFi.</string>
+    <string name="error_synchronization">Error synchronizing. Please retry</string>
+    <string name="error_opening_camera">Error opening camera.</string>
+    <string name="error_connecting_camera">Error connecting remote camera. Please retry</string>
+    <string name="error_finding_camera">Cannot find remote camera. Please make sure that camera is open on BOTH devices. Continue in 2D mode"</string>
+    <string name="error_no_media">No media files found, exiting</string>
+    <string name="error_too_much_depth">Too much depth detected in picture. Make sure cameras are not too close to objects in the scene!</string>
+    <string name="error_photo_alignment">Error generating 3D photo. Make sure cameras are not blocked and there is enough lighting and texture in the scene</string>
+    <string name="error_video_alignment">Error generating 3D video. Make sure cameras are not blocked and there is enough lighting and texture in the scene</string>
+    <string name="error_p2p_failure">Error communicating with remote device.</string>
+    <string name="aimfire_message">Aimfire Message: </string>
+    <string name="error_cannot_switch_photo_video">Remote Camera not active, cannot switch photo/video mode</string>
+    <string name="error_cannot_switch_photo_video2">File transfer in progress, cannot switch photo/video mode</string>
+    <string name="error_cannot_switch_front_back">Remote Camera not active, cannot switch front/back mode</string>
+    <string name="error_cannot_capture_video">Remote Camera not active! Please bring Camarada to foreground.</string>
+    <string name="error_cannot_capture_photo">Remote Camera not active! Please bring Camarada to foreground.</string>
+    <string name="error_cannot_start">Error: cannot start</string>
+    <string name="error_capture_time_diff_too_large">Frame rate too low!</string>
+    <string name="error_service_discovery_not_supported">Error: service discovery not supported</string>
+    <string name="error_excessive_p2p_latency">Error: excessive latency </string>
+    <string name="error_start_timing_wrong">Error: wrong capture timing </string>
+    <string name="error_image_not_sbs">Error: image is not in full side-by-side format </string>
+    <string name="error_no_network">Error: device has no network connection. </string>
+    <string name="error_network_unreachable">Network error, check your network connection and try again. </string>
+    <string name="error_network_error">Network error, please try again later. </string>
+    <string name="error_server_error">Server error, please try again later. </string>
+    <string name="error_authorization_error">Authorization error. </string>
+    <string name="error_unknown_error">Unknown error, please try again later. </string>
+    <string name="error_incorrect_link">Link address is incorrect!</string>
+    <string name="error_download_manager">Download Manager error. Please try again later.</string>
+    <string name="warning_empty_file">File is not available for download yet. Please try again later.</string>
+    <string name="warning_p2p_off">Wi-Fi P2P off. Please turn on Wi-Fi</string>
+    <string name="warning_p2p_channel_disconnected">Wi-Fi P2P channel disconnected. Reconnect</string>
+    <string name="warning_file_transfer_in_progress">File transfer still in progress. Exit camera anyway?</string>
+    <string name="warning_exit_camera">Exit 3D Camera on this device (and on the remote device, too)?</string>
+    <string name="warning_front_camera">To take selfies, move two cameras close to each other and keep them a good distance away from your face. Selfie stick is recommended.</string>
+    <string name="warning_search_interrupted">Searching for remote camera interrupted. Continue in 2D mode"</string>
+    <string name="warning_item_delete">1 item will be deleted</string>
+    <string name="warning_items_delete"> item(s) will be deleted</string>
+    <string name="warning_device_no_gyro"> This device doesn\'t fully support Google Cardboard. You can still use it to capture 3D video, but may have trouble viewing using the Cardboard.</string>
+    <string name="warning_old_cvr_found"> Found files created by older versions of Camarada. They are backed up to </string>
+    <string name="warning_new_version_available"> A new version is available, upgrade?</string>
+    <string name="warning_decoding_not_supported"> It appears that this device doesn\'t support 1080p VR video playback. You can still use it as a capturing device.</string>
+    <string name="info_share_prompt">Share this app with a friend, so you can create true stereoscopic 3D video together next time?</string>
+    <string name="info_survey_prompt">Would you take a quick survey to help us improve your experience?</string>
+    <string name="info_download_first">Please download this video first.</string>
+
+    <string name="preparing_camera">Preparing camera</string>
+    <string name="connecting">Connecting&#x2026;</string>
+    <string name="scanning">Searching&#x2026;</string>
+    <string name="syncing">Syncing&#x2026;</string>
+    <string name="tap_to_stop">STOP</string>
+    <string name="tap_to_sync">SYNC</string>
+    <string name="left_camera_ready">Left Camera Ready</string>
+    <string name="right_camera_ready">Right Camera Ready</string>
+
+    <!-- for file format dialog -->
+    <string-array name="fileFormats">
+        <item>Side-by-Side</item>
+        <item>Red/Cyan</item>
+        <item>3D TV</item>
+    </string-array>
+
+    <!-- for cameraFilter_spinner; match with CamcorderActivity constants -->
+    <string-array name="cameraFilterNames">
+        <item>Normal</item>
+        <item>Black &amp; white</item>
+        <item>Filter: blur</item>
+        <item>Filter: sharpen</item>
+        <item>Filter: edge detect</item>
+        <item>Filter: emboss</item>
+    </string-array>
+
+    <!-- for intro/help page titels-->
+    <string-array name="introPageTitles">
+        <item>A Camera Like No Other</item>
+        <item>How It Works</item>
+        <item>Capture 3D Content</item>
+        <item>Control 3D Effect</item>
+    </string-array>
+
+    <!-- for intro/help page descriptions-->
+    <string-array name="introPageDescs">
+        <item>Camarada is world\'s first and only mobile app that captures TRUE 3D videos!\n\nFrom now on, you can preserve and relive your memories in VR!</item>
+        <item>Single Phone Mode: It captures 2D video and renders in VR mode for immersive viewing.\n\nDual Phone Mode: It automatically links two phones to capture stereoscopic 3D video.\n\nMulti-Phone (3+) mode: Panoramic Video</item>
+        <item>Capture your first 3D video is easy as pie, with results comparable to cameras that cost hundreds even thousands of dollars.\n\nSimply pair two phones, then stack them (as shown in picture above) to begin capture.</item>
+        <item>The amount of 3D effect is determined by the distance between the two cameras.\n\nFor optimal viewing comfort, adjust the distance according to how far the main object of interest is in the scene - a rule of thumb is shown above.</item>
+    </string-array>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="pref_header_settings_capture">Capture Options</string>
+    <string name="pref_header_settings_view">Viewing Options</string>
+
+    <string name="pref_title_capture_auto">Auto</string>
+    <string name="pref_description_capture_auto">In Dual Mode this camera position will be automatically selected
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="pref_title_zoom_options">Zoom Level</string>
+    <string name="pref_title_parallax_options">Parallax Adjustment</string>
+
+    <string name="pref_title_capture_options">Capture Options</string>
+    <string name="pref_title_capture_resolution">Choose video resolution</string>
+    <string name="pref_title_capture_position">Preferred camera position in Dual-Mode</string>
+    <string name="pref_title_capture_storage">Select storage device in Dual-Mode</string>
+    <string name="pref_title_view_options">Viewing Options</string>
+    <string name="pref_title_view_zoom">Preferred zoom level</string>
+    <string name="pref_title_parallax_adjustment">Preferred parallax adjustment</string>
+    <string name="dialog_title_camera_resolutions">Video Resolution</string>
+    <string name="dialog_title_camera_positions">Camera Position</string>
+    <string name="dialog_title_storage_devices">Storage Devices</string>
+    <string name="dialog_title_zoom_levels">Zoom Levels</string>
+    <string name="dialog_title_parallax_adjustments">Parallax Adjustments</string>
+
+</resources>

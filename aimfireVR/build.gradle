@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+    defaultConfig {
+        applicationId "com.aimfire.camarada"
+        minSdkVersion 19
+        targetSdkVersion 21
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt', 'proguard-google-api-client.txt', 'proguard-gvr.txt'
+        }
+    }
+    //after we upgraded Google VR SDK, we have to do below to limit us to only armeabi-v7a. see
+    //http://stackoverflow.com/questions/37246792/forcing-cpu-abi-to-armeabi-v7a-on-android for
+    //rationale. basically we do not need to support x86 or MIPS ABI (because so few devices out
+    //there uses it, and we compile for only armeabi-v7a which runs fine on arm64-v8a
+    splits {
+        // Configures multiple APKs based on ABI.
+        abi {
+
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for x86, armeabi-v7a, and mips.
+
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include "armeabi-v7a"
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+}
+
+dependencies {
+    compile project(":aimfireLib-release")
+    compile project(":aimfireCVLib-release")
+
+    compile project(path: ':surveyLib')
+
+    //needed for cardboard sdk
+    compile 'com.google.vr:sdk-base:1.10.0'
+
+    //needed for material design
+    compile 'com.android.support:appcompat-v7:24.0.0'
+
+    //needed for FAB
+    compile 'com.android.support:design:24.0.0'
+
+    //needed for firebase analytics
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.google.firebase:firebase-crash:10.0.1'
+
+    //the following libs are needed by both aimfireLib and aimfireVR modules. they are
+    //declared in build.gradle for aimfireLib and we don't need to include them here
+    //again for the AimfireVR project. But Camarada_EXT project needs them.
+    compile 'com.google.android.gms:play-services-gcm:10.0.1'
+    compile 'com.google.android.gms:play-services-plus:10.0.1'
+    compile 'com.google.android.gms:play-services-drive:10.0.1'
+    compile 'com.google.android.gms:play-services-auth:10.0.1'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.android.support:support-v4:24.0.0'
+
+    compile 'com.android.support:support-vector-drawable:24.0.0'
+
+    compile 'uk.co.samuelwall:material-tap-target-prompt:1.9.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

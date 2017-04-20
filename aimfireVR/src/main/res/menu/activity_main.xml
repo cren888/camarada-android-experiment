@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/action_settings"
+        android:showAsAction="never" />
+    -->
+
+    <item android:id="@+id/action_help"
+        android:icon="@drawable/ic_help_white_24dp"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_tutorial"
+        android:icon="@drawable/ic_play_circle_filled_white_24dp"
+        android:title="@string/action_tutorial"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_feedback"
+        android:icon="@drawable/ic_feedback_white_24dp"
+        android:title="@string/action_feedback"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_switch_account"
+        app:showAsAction="never"
+        android:title="@string/action_switch_account" />
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        />
+</menu>

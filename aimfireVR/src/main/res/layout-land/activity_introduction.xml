@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroductionActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/intro_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/nav_bar" 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="#404040"
+        android:alpha="0.8"
+        style="?android:attr/buttonBarStyle">
+    
+        <Button
+            android:id="@+id/skip_button"
+            style="?android:attr/buttonBarButtonStyle" 
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onClickSkip"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:text="@string/skip" />
+
+        <LinearLayout
+            android:id="@+id/dots" 
+            android:orientation="horizontal"
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"/>
+
+        <Button
+            android:id="@+id/next_button"
+            style="?android:attr/buttonBarButtonStyle" 
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:onClick="onClickNext"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:text="@string/next" />
+    </LinearLayout>
+    
+</RelativeLayout>

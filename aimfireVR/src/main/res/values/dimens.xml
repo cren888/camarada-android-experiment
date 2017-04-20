@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="circular_progress_drawable_radius">200dp</dimen>
+    <dimen name="circular_progress_drawable_ring_size">10dp</dimen>
+
+    <dimen name="hint_offset_size">20dp</dimen>
+</resources>

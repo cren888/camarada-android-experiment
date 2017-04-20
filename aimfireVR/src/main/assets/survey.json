@@ -1,0 +1,37 @@
+{
+  "name": "S2",
+  "questions": [
+    {
+      "type": "singlechoice",
+      "id": "q1",
+      "question": "Which of the issue below was the biggest problem during your experience with Camarada?",
+      "choices": [
+        "I don't have a VR viewer (e.g. Google Cardboard)",
+        "I can't find a friend or second phone to capture 3D video",
+        "I don't like the quality of 3D videos",
+        "I don't know how to use it - it's too complicated",
+        "I experienced bugs"
+      ]
+    },
+    {
+      "type": "multichoice",
+      "id": "q2",
+      "question": "Which of the new feature(s) below would you be most interested in (check all that apply)?",
+      "max": 5,
+      "min": 1,
+      "choices": [
+        "Extended recording time",
+        "Ability to post video to other social sites (e.g. YouTube)",
+        "Ability to follow friends, post comments, like videos",
+        "Multi-phone mode to record panoramic video",
+        "None of the Above"
+      ]
+    },
+    {
+      "type": "freewrite",
+      "id": "q3",
+      "required": false,
+      "question": "Any feedback, comment or feature request that you can share with us?"
+    }
+  ]
+}

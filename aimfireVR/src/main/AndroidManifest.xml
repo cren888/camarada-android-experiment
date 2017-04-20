@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aimfire.camarada"
+    android:versionCode="70"
+    android:versionName="1.2.5"> <!-- google VR SDK, certain audio APIs requires KitKat, hence minSdkVersion = 19 -->
+    <!-- targetSdkVersion="23" breaks the build, possibly due to runtime permssion, -->
+    <!-- AudioRecord problem. hence we set targetSdkVersion="21" for now -->
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="21" />
+
+    <!-- google VR SDK requires OpenGL ES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- Indicates use of Android's VR-mode, available only on Android N+. -->
+    <uses-feature android:name="android.software.vr.mode" android:required="false"/>
+    <!-- Indicates use of VR features that are available only on Daydream-ready devices. -->
+    <uses-feature android:name="android.hardware.vr.high_performance" android:required="false"/>
+
+    <!-- enable the following if camera/camcorder app. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- For carboard viewer. -->
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- For google drive api -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:logo="@drawable/logo"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.aimfire.main.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aimfire.main.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.aimfire.main.SurveyActivity"
+            android:label="@string/survey_activity_name" />
+        <activity
+            android:name="com.aimfire.intro.IntroductionActivity"
+            android:parentActivityName="com.aimfire.main.MainActivity">
+        </activity>
+        <activity
+            android:name="com.aimfire.plotter.PlotResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.aimfire.main.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.aimfire.demo.CameraActivity"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.aimfire.main.MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name="com.aimfire.demo.CamcorderActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.aimfire.main.MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name="com.aimfire.gallery.GalleryActivity"
+            android:label="@string/gallery_activity_name"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.aimfire.main.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.aimfire.main.MainActivity" />
+            <!-- this intent filter is for launching our app from -->
+            <!-- mail programs (or other non-browser programs) by -->
+            <!-- camarada.co link) -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="@string/app_domain" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <!-- this intent filter is for launching our app from browser on our -->
+            <!-- landing page, which has the format of "aimfire-vr://docs.google. -->
+            <!-- .com/?id={resourceId}&export=download". we could register a -->
+            <!-- regular filter with host="docs.google.com" and scheme type https. -->
+            <!-- but then we will be competing with apps like google drive. so we -->
+            <!-- choose to use a custom scheme type instead (and host="*" in case -->
+            <!-- we change cloud storage provider later on -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="*" />
+                <data android:scheme="aimfire-vr" />
+            </intent-filter>
+            <!-- this intent filter is for file explorer -->
+            <!-- browser apps opening file by extension -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\.cvr"
+                    android:scheme="file" />
+            </intent-filter>
+            <!-- this intent filter is for opening downloaded file -->
+            <!-- from google drive or from web browser by mime type -->
+            <!-- probably will never be executed as filters above -->
+            <!-- should cover what we need -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="*" />
+                <data android:scheme="file" />
+                <data android:scheme="smb" />
+                <data android:scheme="content" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:mimeType="@string/app_mime" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aimfire.gallery.cardboard.PhotoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme">
+        </activity>
+        <activity
+            android:name="com.aimfire.gallery.cardboard.MovieActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme">
+            <meta-data android:name="com.google.android.vr.icon"
+                android:resource="@drawable/vr_icon" />
+            <meta-data android:name="com.google.android.vr.icon_background"
+                android:resource="@drawable/vr_icon_bgd" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.google.intent.category.CARDBOARD" />
+                <category android:name="com.google.intent.category.DAYDREAM" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.aimfire.drive.UploadFileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/TransparentTheme">
+
+            <!--             android:theme="@android:style/Theme.NoDisplay">  -->
+        </activity>
+        <activity
+            android:name="com.aimfire.gallery.CopyToClipboardActivity"
+            android:icon="@drawable/ic_copy_link"
+            android:label="@string/clipboard_activity_name"
+            android:theme="@android:style/Theme.NoDisplay">
+        </activity>
+        <activity
+            android:name="com.aimfire.main.SettingsActivity"
+            android:label="@string/title_activity_settings">
+            android:parentActivityName="com.aimfire.main.MainActivity"></activity>
+
+        <!-- Handle backend/Wifi messaging, launch audio ranging tasks -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.service.AimfireService"
+            android:exported="false"
+            android:label="Aimfire Service" />
+
+        <!-- Processes stereo pair in the background, one pair at a time -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.gallery.service.PhotoProcessor"
+            android:exported="false"
+            android:label="@string/photo_processor_name" />
+
+        <!-- Processes video pair in the background, one pair at a time -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.gallery.service.MovieProcessor"
+            android:exported="false"
+            android:label="@string/video_processor_name" />
+
+        <!-- check the latest version and notify upgrade if necessary -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.main.VersionChecker"
+            android:exported="false"
+            android:label="@string/samples_downloader_name" />
+
+        <!-- Downloads sample sbs's or cvr's (preview frame for them) -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.gallery.service.SamplesDownloader"
+            android:exported="false"
+            android:label="@string/samples_downloader_name" />
+
+        <!-- Unpack downloaded preview/sbs/cvr file in the background -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.drive.service.DownloadCompletionService"
+            android:exported="false"
+            android:label="@string/download_completion_name" />
+
+        <!-- upload video/photo to google drive in the background -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.drive.service.FileUploaderService"
+            android:exported="false"
+            android:label="@string/file_uploader_name" />
+
+        <!-- download preview/photo from google drive in the background -->
+        <!-- cvr download cannot use this. need use DownloadFileFragment -->
+        <!-- only this app can use the service -->
+        <service
+            android:name="com.aimfire.drive.service.FileDownloaderService"
+            android:exported="false"
+            android:label="@string/file_downloader_name" />
+
+        <!-- Processes google drive server completion events -->
+        <service android:name="com.aimfire.drive.service.DriveCompletionService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.drive.events.HANDLE_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- Processes download manager completion events -->
+        <!-- only this app can use the service -->
+        <receiver android:name="com.aimfire.drive.service.DownloadManagerBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <!--                 <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />  -->
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

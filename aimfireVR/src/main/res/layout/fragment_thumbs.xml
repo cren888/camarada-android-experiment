@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/thumbLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThumbsFragment" >
+
+    <LinearLayout 
+        android:id="@+id/noMediaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/no_media_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/noMediaHintText"
+            style="@style/NoMediaDescText" />
+        
+        <ImageView
+            android:id="@+id/no_media_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/noMedia"
+            android:src="@drawable/no_media_found"
+            android:alpha="0.25"/>
+
+        <TextView
+            android:id="@+id/no_media_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:layout_gravity="center"
+            android:layout_marginTop ="0dp"
+            android:layout_marginBottom ="20dp"
+            android:gravity="center"
+            android:text="@string/noMediaHintTitle"
+            style="@style/NoMediaTitleText" />
+        
+    </LinearLayout>
+      
+    <GridView 
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:numColumns="3"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+</RelativeLayout>
