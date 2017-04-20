@@ -5,7 +5,7 @@
 2. 3D VR Photo Cardboard Viewer
 3. 3D VR Photo Anaglyph/SBS Mode Viewer
 
-## Using technologies
+## Technologies
 - Google VR
 - WiFi P2P
 - Computer Vision
@@ -13,8 +13,9 @@
 - OpenAL
 
 ## Please note
+Some elements are not in the repository, and need to be setup before the project can be built.
 1. You will need set up your own API key and get a google-services.json file if you want to use Firebase (copy that to aimfireVR directory) 
-2. You will need your own implementation of a cloud storage solution (we will stub functions to compile)
+2. You will need your own implementation of a cloud storage solution for sharing. (we plan to supply stub functions to make this easier)
 
 License
 =======
